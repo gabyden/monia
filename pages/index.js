@@ -1,8 +1,8 @@
 import CoinGecko from 'coingecko-api';
 import Head from 'next/head';
 
+import { TableView } from '../components/TableView';
 import styles from '../styles/main.module.css';
-import { TableView } from './components/TableView';
 
 const coinGeckoClient = new CoinGecko();
 export default function Main(properties) {
