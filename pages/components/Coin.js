@@ -5,6 +5,7 @@ import { HiArrowDown, HiArrowUp } from 'react-icons/hi';
 export const Coin = ({
   name,
   key,
+  number,
   image,
   symbol,
   price,
@@ -18,6 +19,9 @@ export const Coin = ({
         key={key}
         className="border-b border-indigo-900 hover:bg-purple-900 transition duration-400 ease-in-out"
       >
+        <td className="py-3 px-6 text-left">
+          <span className="font-light uppercase">{number}</span>
+        </td>
         <td className="py-3 px-6 text-left whitespace-nowrap">
           <div className="flex items-center">
             <div className="mr-2">

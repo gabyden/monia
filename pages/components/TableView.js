@@ -13,6 +13,7 @@ export const TableView = properties => {
             <table className="min-w-max w-full table-auto">
               <thead>
                 <tr className="gradientBg text-white uppercase text-sm leading-normal">
+                  <th className="py-3 px-6 text-left">#</th>
                   <th className="py-3 px-6 text-left">Name</th>
                   <th className="py-3 px-6 text-left">Symbol</th>
                   <th className="py-3 px-6 text-left">Price</th>
@@ -22,10 +23,11 @@ export const TableView = properties => {
                 </tr>
               </thead>
               <tbody className="text-white text-sm font-light bodyList">
-                {allData.map(coin => {
+                {allData.map((coin, index) => {
                   return (
                     <Coin
-                      key={coin.id}
+                      key={`${coin.id}_${index}`}
+                      number={index + 1}
                       name={coin.name}
                       price={coin.current_price}
                       symbol={coin.symbol}
